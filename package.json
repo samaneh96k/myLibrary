@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "node server.js",
-    "build": "next build",
-    "prod_start": "NODE_ENV=production node server.js",
+    "build": "next build && next start ",
+    "start": "NODE_ENV=production node server.js",
     "export": "next export"
   },
   "dependencies": {
