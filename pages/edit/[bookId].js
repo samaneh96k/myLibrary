@@ -21,6 +21,5 @@ export const getServerSideProps = async (context) => {
       props: {
         book,
       },
-   
     };
   };
