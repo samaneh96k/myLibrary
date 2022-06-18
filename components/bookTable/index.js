@@ -31,7 +31,7 @@ const BookTable = ({ allBooks }) => {
     </thead>
     <tbody>
         {allBooks.map(book => (
-          <tr>
+          <tr key={book._id}>
             <td>{book.bookName}</td>
             <td>{book.writer}</td>
             <td>{book.category}</td>

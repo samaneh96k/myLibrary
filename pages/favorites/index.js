@@ -28,7 +28,7 @@ const Favorites = () => {
         </Link>
           
         {state.favorites.favoriteItems.map((book) => ( 
-            <Favorite book={book} removeItemHandler={ removeItemHandler} />
+            <Favorite key={book._id} book={book} removeItemHandler={ removeItemHandler} />
       ))}
            
     </Layout> );

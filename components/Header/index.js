@@ -1,5 +1,6 @@
 import styles from './Header.module.css';
 import Link from 'next/link'
+import Image  from "next/image";
 const Header = () => {
     return ( <div className={styles.header}>
         
@@ -11,7 +12,7 @@ const Header = () => {
           مشاهده همه</Link></button>
         </div>
         <div className={styles.leftHeader}>
-            <img className={styles.imgHeader} src="/assets/images/head.png"></img>
+            <Image  className={styles.imgHeader} src="/assets/images/head.png" alt="i am reading book"/>
         </div>
         </div> );
 }

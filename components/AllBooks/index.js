@@ -53,7 +53,7 @@ const AllBooks = ({ books,handleClickRadioBtn }) => {
         {books.length>0?(
       <div className={styles.allbooks}>
        {books.map((book,index) =>
-          <div className={styles.book}>
+          <div className={styles.book} key={book._id}>
             <Card className={styles.card}>
                  <CardImg className={styles.img}  src={`data:${book.Photo[0].media.contentType};base64,${(book.Photo[0].media?.data)}`}/>  
           <Link href={"/book/[bookId]"} as={`/book/${book._id}`}>
@@ -77,7 +77,7 @@ const AllBooks = ({ books,handleClickRadioBtn }) => {
         </Card>
           </div>
         )}
-      </div>):(<div className={styles.notfound}><p>"کتابی یافت نشد"</p></div>)}
+      </div>):(<div className={styles.notfound}><p>کتابی یافت نشد</p></div>)}
     </>
   );
 };

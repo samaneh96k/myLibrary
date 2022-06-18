@@ -6,7 +6,7 @@ import { faHeartCircleMinus } from "@fortawesome/free-solid-svg-icons";
 const Favorite = ({ book, removeItemHandler }) => {
   console.log(book, "booook");
   return (
-    <div className={styles.bookIndex}>
+    <div className={styles.bookIndex} key={book._id}>
       <Link href={"/book/[bookId]"} as={`/book/${book._id}`}>
         <div className={styles.books}>
         
