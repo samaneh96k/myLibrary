@@ -15,6 +15,7 @@ import React, { useContext, useRef } from "react";
 import Cookies from "js-cookie";
 import Link from "next/link";
 const Layout = ({ children }) => {
+  const ref = useRef();
   const { state, dispatch } = useContext(Store);
   const { darkMode, favorites } = state;
   const darkModeChangeHandler = () => {
@@ -40,7 +41,10 @@ const Layout = ({ children }) => {
         <div className={styles.RightMenu}>
           <>
           <Link href="/">
-            home
+            <FontAwesomeIcon
+            icon={faBook}
+           className={styles.icon}
+         />
             </Link>
           </>
             
@@ -58,16 +62,31 @@ const Layout = ({ children }) => {
                    className={styles.badgeicon}
                   >
                     {favorites.favoriteItems.length}{" "}
-                   {" "}
+                    <FontAwesomeIcon
+                    icon={faHeart}
+                    
+                      className={styles.icon}
+                    />{" "}
                   </Badge>
                 </div>
-              : <div>no</div>}
+              : <FontAwesomeIcon
+                  icon={faHeartCircleBolt}
+                  className={styles.icon}
+                   >
+                  {" "}
+                </FontAwesomeIcon>}
           </Link>
         <Link href="/allBooks">
-        all
+        <FontAwesomeIcon
+                      icon={faBookOpen}
+                      className={styles.icon}
+                       />
           </Link>
           <Link href="/addNewBook">
-       new
+        <FontAwesomeIcon
+                      icon={faPlusSquare}
+                      className={styles.icon}
+                     />
             </Link>
            
         </div>

@@ -12,7 +12,8 @@ const Header = () => {
           مشاهده همه</Link></button>
         </div>
         <div className={styles.leftHeader}>
-            <Image  className={styles.imgHeader} src="/assets/images/head.png" alt="i am reading book"/>
+            <Image  className={styles.imgHeader} src="/assets/images/head.png"     width= '600'
+    height= "600" alt="i am reading book"/>
         </div>
         </div> );
 }
