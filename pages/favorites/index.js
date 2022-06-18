@@ -3,11 +3,7 @@ import { useContext } from "react";
 import { Store } from "../../Store/store";
 import Favorite from "../../components/favorite";
 import { Button } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faHome,
 
-  } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../../components/Layout/Index";
 const Favorites = () => {
     const {  state,dispatch} = useContext(Store);
@@ -17,10 +13,11 @@ const Favorites = () => {
       };
     return (<Layout> <Link href="/" style={{ textDecoration: 'none' }}>   
         <Button variant="Light" style={{ direction: "ltr", margin: "2%" }}>
-        <FontAwesomeIcon
-        icon={faHome}
+        <i
+        className="fa fa-home"
+      
         style={{ fontSize: 30, color: "#ffff" ,margin:"2%"}}
-            >  </FontAwesomeIcon>
+            >  </i>
                
                  
               

@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { CardImg } from "react-bootstrap";
 import styles from "./favorite.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeartCircleMinus } from "@fortawesome/free-solid-svg-icons";
+
 const Favorite = ({ book, removeItemHandler }) => {
   console.log(book, "booook");
   return (
@@ -28,12 +27,13 @@ const Favorite = ({ book, removeItemHandler }) => {
         className={styles.removeBtn}
         onClick={() => removeItemHandler(book)}
       >
-        {" "}<FontAwesomeIcon
-          icon={faHeartCircleMinus}
+        {" "}<i
+        className="fa fa-minus-circle"
+         
           style={{ fontSize: 30, color: "#fff", margin: "2%" }}
         >
           {" "}
-        </FontAwesomeIcon>
+        </i>
       </button>
       <hr />
     </div>

@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeartCirclePlus } from "@fortawesome/free-solid-svg-icons";
+
 import Link from "next/link";
 import { Card, CardImg, Button } from "react-bootstrap";
 import styles from "./book.module.css";
@@ -22,12 +21,13 @@ const Book = ({ bookOne, addToFavoritesHandler }) => {
         </div>
       </Link>
       <Button variant="light" onClick={() => addToFavoritesHandler(book)}>
-        {" "}<FontAwesomeIcon
-          icon={faHeartCirclePlus}
+        {" "}<i
+        className="fa fa-gratipay"
+         
           style={{ fontSize: 30, color: "#b8b8ff", margin: "2%" }}
         >
           {" "}
-        </FontAwesomeIcon>{" "}
+        </i>{" "}
       </Button>
     </Card>
   );

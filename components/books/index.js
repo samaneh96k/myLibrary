@@ -6,8 +6,6 @@ import {  Button  } from "react-bootstrap";
 import { useContext, useState } from "react";
 import { useRouter } from "next/router";
 import { Store } from "../../Store/store";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faClose } from "@fortawesome/free-solid-svg-icons";
 import Book from "../book";
 const Books = ({ data }) => {
   SwiperCore.use([Navigation, Pagination]);
@@ -32,12 +30,12 @@ const Books = ({ data }) => {
         ? <div className={styles.alert} variant="warning">
             <p>این مورد موجود است</p>
             <Button variant="light" onClick={() => setShow(false)}>
-              {" "}<FontAwesomeIcon
-                icon={faClose}
+              {" "}<i
+                className="fa fa-times"
                 style={{ fontSize: 30, color: "#E9DAC1", margin: "2%" }}
               >
                 {" "}
-              </FontAwesomeIcon>{" "}
+              </i>{" "}
             </Button>
           </div>
         : null}

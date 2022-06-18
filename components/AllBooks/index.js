@@ -1,7 +1,6 @@
-import { faClose } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { useRouter } from "next/router";
-import {faHeartCirclePlus } from "@fortawesome/free-solid-svg-icons";
+
 import Link from 'next/link';
 import { useContext, useState } from "react";
 import { Button , Card, CardImg} from "react-bootstrap";
@@ -40,12 +39,14 @@ const AllBooks = ({ books,handleClickRadioBtn }) => {
         ? <div className={styles.alert} variant="warning">
             <p>این مورد موجود است</p>
             <Button variant="light" onClick={() => setShow(false)}>
-              {" "}<FontAwesomeIcon
-                icon={faClose}
+              {" "}<i
+                
+        className="fa fa-times"
+
                 style={{ fontSize: 30, color: "#b8b8ff", margin: "2%" }}
               >
                 {" "}
-              </FontAwesomeIcon>{" "}
+              </i>{" "}
             </Button>
           </div>
         : null}
@@ -67,12 +68,14 @@ const AllBooks = ({ books,handleClickRadioBtn }) => {
             variant="light"
             onClick={() => addToFavoritesHandler(book)}
           >
-            {" "}<FontAwesomeIcon
-              icon={faHeartCirclePlus}
+            {" "}<i
+        className="fa fa-gratipay"
+
+            
               style={{ fontSize: 30, color: "#b8b8ff", margin: "2%" }}
             >
               {" "}
-            </FontAwesomeIcon>{" "}
+            </i>{" "}
           </Button>
         </Card>
           </div>

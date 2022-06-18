@@ -1,15 +1,6 @@
 import styles from "./Layout.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Badge, Form ,Container} from "react-bootstrap";
-
-// import the icons you need
-import {
-  faBook,
-  faHeartCircleBolt,
-  faHeart,
-  faPlusSquare,
-  faBookOpen
-} from "@fortawesome/free-solid-svg-icons";
+import classNames from "classnames";
 import { Store } from "../../Store/store";
 import React, { useContext, useRef } from "react";
 import Cookies from "js-cookie";
@@ -41,9 +32,9 @@ const Layout = ({ children }) => {
         <div className={styles.RightMenu}>
           <>
           <Link href="/">
-            <FontAwesomeIcon
-            icon={faBook}
-           className={styles.icon}
+            <i className={classNames(styles.icon,"fa fa-book fa-book")}
+        
+          
          />
             </Link>
           </>
@@ -62,30 +53,29 @@ const Layout = ({ children }) => {
                    className={styles.badgeicon}
                   >
                     {favorites.favoriteItems.length}{" "}
-                    <FontAwesomeIcon
-                    icon={faHeart}
+                    <i className={classNames(styles.icon,"fa fa-heart")}
                     
-                      className={styles.icon}
+                    
                     />{" "}
                   </Badge>
                 </div>
-              : <FontAwesomeIcon
-                  icon={faHeartCircleBolt}
-                  className={styles.icon}
+              : <i
+                  
+                  className={classNames(styles.icon,"fa fa-heart-o")}
                    >
                   {" "}
-                </FontAwesomeIcon>}
+                </i>}
           </Link>
         <Link href="/allBooks">
-        <FontAwesomeIcon
-                      icon={faBookOpen}
-                      className={styles.icon}
+        <i
+                     
+                      className={classNames(styles.icon,"fa fa-list-alt")}
                        />
           </Link>
           <Link href="/addNewBook">
-        <FontAwesomeIcon
-                      icon={faPlusSquare}
-                      className={styles.icon}
+        <i
+                    
+                      className={classNames(styles.icon,"fa fa-plus-square")}
                      />
             </Link>
            
@@ -97,7 +87,7 @@ const Layout = ({ children }) => {
       <footer className={darkMode ? styles.footerDark : styles.footer}>
         <p>خلاصه کتاب های من را اینجا مشاهده میکنید</p>
 
-        <i className="fa fa-instagram" aria-hidden="true" />
+      
       </footer>
     </Container>
   );
