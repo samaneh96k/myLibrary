@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'BYekan';
+  src: url('../public/assets/font/BYekanWeb.eot') format('eot'),
+   url('../public/assets/font/BYekanWeb.ttf') format('truetype'),
+  url('../public/assets/font/BYekanWeb.woff') format('woff'),
+ 
+}
+@font-face {
+  font-family: 'vazir';
+  src: url('../public/assets/font/Vazir-Regular-FD.eot') format('eot'),
+   url('../public/assets/font/Vazir-Regular-FD.ttf') format('truetype'),
+  url('../public/assets/font/Vazir-Regular-FD.woff') format('woff'),
+  url('../public/assets/font/Vazir-Regular-FD.woff2') format('woff2');
+}
+:root{
+  --keremiBrown:#ffd8be;
+  --keremi:#ffeedd;
+  --light:#f8f7ff;
+  --purpleLow:#b8b8ff;
+  --purpleMedium:#9381ff;
+  --black:#333;
+  --withe:#fff;
+  --purpleDark:#46244C;
+  --purple:#712B75;
+  --yellow:#D49B54;
+  --orange:#C74B50;
+}
+html,
+body {
+  direction: rtl;
+ 
+  padding: 0;
+  margin: 0;
+  font-family: 'vazir' !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+.ant-form-vertical ,.ant-form-item-label, .ant-col-24.ant-form-item-label, .ant-col-xl-24.ant-form-item-label{
+ 
+  text-align :right!important;
+  
+}

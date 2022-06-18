@@ -1,0 +1,33 @@
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../../public/assets/font/Vazir-Regular-FD.eot') format('eot'),
+     url('../../public/assets/font/Vazir-Regular-FD.ttf') format('truetype'),
+    url('../../public/assets/font/Vazir-Regular-FD.woff') format('woff'),
+    url('../../public/assets/font/Vazir-Regular-FD.woff2') format('woff2');
+  }
+  .alert{
+    position: fixed;
+    z-index: 1000;
+    top:50%;
+    right: 40%;
+    width: 20%;
+    height: 10%;
+    color: #d4c2a4;
+   background-color: #ffff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius:3%;
+
+  }
+  .alert p{
+    width: 60%;
+    font-family: 'vazir';
+  }
+  .books{
+
+    width: 100%;
+  font-family: 'vazir';
+ padding: 15%;
+}

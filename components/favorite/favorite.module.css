@@ -1,0 +1,58 @@
+.bookIndex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.books{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 10%;
+
+    cursor: pointer;
+ 
+}
+
+
+.bookDetails{
+width: 50%;
+margin-right: 10%;
+}
+.removeBtn{
+    border: none;
+    background:none;
+}
+@media screen and (max-width: 480px){
+    .bookIndex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .books{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 50%;
+        height: 10%;
+    
+        cursor: pointer;
+     
+    }
+    
+    
+    .removeBtn{
+        border: none;
+        background:none;
+    }
+.bookDetails{
+    width: 50%;
+    margin-right: 10%;
+    font-size:10px;
+    }
+    .bookDetails h5 {   font-size:12px;
+    }
+    .bookDetails p{   font-size:8px;}
+}
