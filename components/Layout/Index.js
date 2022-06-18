@@ -4,16 +4,14 @@ import { Badge, Form ,Container} from "react-bootstrap";
 
 // import the icons you need
 import {
-  faArrowAltCircleRight,
   faBook,
-  faLaptop,
   faHeartCircleBolt,
   faHeart,
   faPlusSquare,
   faBookOpen
 } from "@fortawesome/free-solid-svg-icons";
 import { Store } from "../../Store/store";
-import { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import Cookies from "js-cookie";
 import Link from "next/link";
 const Layout = ({ children }) => {
@@ -33,6 +31,7 @@ const Layout = ({ children }) => {
               type="switch"
               id="custom-switch"
               label=""
+              ref={ref}
               checked={darkMode}
               onChange={darkModeChangeHandler}
             className={styles.switch}
@@ -41,10 +40,7 @@ const Layout = ({ children }) => {
         <div className={styles.RightMenu}>
           <>
           <Link href="/">
-            <FontAwesomeIcon
-            icon={faBook}
-           className={styles.icon}
-          />
+            home
             </Link>
           </>
             
@@ -62,30 +58,16 @@ const Layout = ({ children }) => {
                    className={styles.badgeicon}
                   >
                     {favorites.favoriteItems.length}{" "}
-                    <FontAwesomeIcon
-                      icon={faHeart}
-                      className={styles.icon}
-                    />{" "}
+                   {" "}
                   </Badge>
                 </div>
-              : <FontAwesomeIcon
-                  icon={faHeartCircleBolt}
-                  className={styles.icon}
-                >
-                  {" "}
-                </FontAwesomeIcon>}
+              : <div>no</div>}
           </Link>
         <Link href="/allBooks">
-        <FontAwesomeIcon
-                      icon={faBookOpen}
-                      className={styles.icon}
-                    />
+        all
           </Link>
           <Link href="/addNewBook">
-        <FontAwesomeIcon
-                      icon={faPlusSquare}
-                      className={styles.icon}
-            />
+       new
             </Link>
            
         </div>
