@@ -9,7 +9,7 @@ const BookTable = ({ allBooks }) => {
 
     return(<div style={{padding:"5%",fontSize:"12px"}}>
       
-      <Link href="/allbook" style={{ textDecoration: 'none' }}>   
+      <Link href="/allBooks" style={{ textDecoration: 'none' }}>   
         <Button variant="Light" style={{ direction: "ltr", margin: "2%" }}>
        بازگشت
                

@@ -9,6 +9,7 @@ const Book = ({ bookOne, addToFavoritesHandler }) => {
       <Link href={"/book/[bookId]"} as={`/book/${bookOne._id}`}>
         <div>
           <CardImg
+            data-testid="bookimg"
             className={styles.imgBooks}
             src={`data:${bookOne.Photo.media
               .contentType};base64,${new Buffer.from(

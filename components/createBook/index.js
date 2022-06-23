@@ -4,6 +4,7 @@ import moment from "moment-jalaali";
 import UploadComponent from "../upload";
 import axios from "axios";
 import styles from './createBook.module.css'
+import { toast } from "react-toastify";
 const { Option } = Select;
 const CreateBook = () => {
   const [form] = Form.useForm();
@@ -15,7 +16,11 @@ const CreateBook = () => {
       console.log(values);
       axios
        .post("http://localhost:3000/api/book/createBook", { values })
-       .then((res) => console.log(res))
+       .then((res) => {console.log(res)
+      
+          toast.success("کتاب مورد نظر با موفقیت بارگذاری شد!");
+          
+      })
        .catch((err) => console.log(err));
     }}
     onFinishFailed={(err) => {
@@ -23,6 +28,7 @@ const CreateBook = () => {
     }}
       className="mb-3 rtl text-right">
         <Form.Item
+          data-testid="bookName"
           label="عنوان کتاب"
           name="bookName"
           rules={[{ required: true, message: "نام کتاب را وارد کنید!" }]}
@@ -84,7 +90,7 @@ const CreateBook = () => {
         </Form.Item>
         <Form.Item
           className="text-center"
-          label="بارگذاری عکس جلد کتاب"
+          label="بارگذاری عکس جلد کتاب(بهتر از حجم عکس پایین 100kbباشد)"
           name="Photo"
           rules={[
             { required: true, message: "عکس جلد کتاب را بارگذاری کنید!" }

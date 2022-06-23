@@ -9,15 +9,22 @@ export default class UploadComponent extends React.Component {
     fileList: [],
     uploading: false,
     uploadedMedia: false,
+  
   };
 
   handleUpload = () => {
-    const { fileList } = this.state;
+   
+      const { fileList } = this.state;
+     
     const formData = new FormData();
-    fileList.forEach((file) => {
-      formData.append("media", file);
-    });
-
+    if (fileList) {
+      fileList.forEach((file) => {
+        formData.append("media", file);
+      });
+    } else {
+      toast.error("فایل مورد نظر یافت   نشد!");
+    }
+  
     this.setState({
       uploading: true,
      
