@@ -16,7 +16,8 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <Container>
+    <div>
+    
       <div className={darkMode ? styles.titleDark : styles.title}>
    <div className={ styles.switchBlock}> <Form variant="danger">
             <Form.Check
@@ -80,7 +81,8 @@ const Layout = ({ children }) => {
             </Link>
            
         </div>
-      </div>
+        </div>
+    
       <main className={darkMode ? styles.mainDark : styles.main}>
         {children}
       </main>
@@ -89,7 +91,7 @@ const Layout = ({ children }) => {
 
       
       </footer>
-    </Container>
+    </div>
   );
 };
 
